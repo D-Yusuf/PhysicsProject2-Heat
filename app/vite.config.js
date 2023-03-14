@@ -3,8 +3,15 @@ import { resolve } from 'path'
 
 export default defineConfig({
   build: {
-    main:resolve(__dirname, 'index.html'),
-    entry: resolve(__dirname, 'main.js'),
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        game: 'src/game.html',
+        // entry: 'main.js',
+        // Add additional entries for each HTML file you want to include
+      }
+    }
+    
   }
 })
   
