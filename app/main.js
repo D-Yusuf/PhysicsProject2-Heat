@@ -1,1 +1,1 @@
-console.log('Hello World')
+import { calculator } from './src/js/calculator'
