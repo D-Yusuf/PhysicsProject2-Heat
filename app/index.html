@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="icon" href="/images/icon.jpeg">
+
+    <title>مشروع التفوق</title>
     <link rel="stylesheet" href="./src/index.css">
   </head>
-  <body>
-    <p class="text-6xl">Lorem ipsum dolor sit amet.</p>
-    <a href="./src/game.html">Go to game</a>
-    <div id="app"></div>
+  <body class=" bg-black-grey transition text-white">
+    <!-- NAVBAR -->
+    <nav class="sticky bg-black-grey top-0 rounded-sm w-full ring-1 ring-reyada-orange">
+      <div class="flex flex-row items-center text-center justify-between">
+        <div class="w-20">
+          <a href="">
+            <img 
+            src="./images/logo.png" 
+            alt="Logo"
+            class=" rounded-full"
+            >
+            
+          </a>
+          <p class="font-bold">قسم العلوم</p>
+        </div>
+        <ul class="flex justify-evenly w-[50%]" dir="rtl">
+          <li><a href="#main">الصفحة الرئيسية</a></li>
+          <li><a href="#about">عن الموقع</a></li>
+          <li><a href="./src/game.html">العب</a></li>
+          <li><a href="#">تواصل معنا</a> </li>
+          <li><a href="#">QrCode</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--// NAVBAR //-->
+    <!-- CONTAINER -->
+    <div  class="container w-full mx-auto ">
+      <div id="main" class="h-screen pt-36">
+        <p>Main Text: <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquid voluptate, veritatis quos iure molestiae, eveniet atque possimus tenetur quia eius nisi labore unde temporibus reiciendis veniam harum aliquam officiis perferendis fugiat hic, nihil sed explicabo illum. Dolorem architecto quibusdam reprehenderit labore blanditiis voluptatum facilis, libero accusamus eaque! Voluptas, beatae?</p>
+      </div>
+      <div id="about" class="h-screen pt-36">
+        <p>About: <br>Aboutasdkasddasd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquid voluptate, veritatis quos iure molestiae, eveniet atque possimus tenetur quia eius nisi labore unde temporibus reiciendis veniam harum aliquam officiis perferendis fugiat hic, nihil sed explicabo illum. Dolorem architecto quibusdam reprehenderit labore blanditiis voluptatum facilis, libero accusamus eaque! Voluptas, beatae?</p>
+      </div>
+      
+    </div>
+    <!-- CONTAINER -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
