@@ -34,7 +34,7 @@ const imperial = {
 
 export function compare(changeText, value, metricKey, imperialKey, metricFunction, imperialFunction) {
     
-    changeText.innerText = `${value} ${metricKey} = ${imperialFunction} ${imperialKey} | ${value} ${imperialKey} = ${metricFunction} ${metricKey}`
+    changeText.innerHTML = `${value} ${metricKey} = ${imperialFunction} ${imperialKey} <br> ${value} ${imperialKey} = ${metricFunction} ${metricKey}`
   
 }
 // Self calling function

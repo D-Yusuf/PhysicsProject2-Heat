@@ -1,110 +1,164 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html class="" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/images/icon.jpeg">
+    <link rel="icon" href="/images/icon.jpeg" />
 
     <title>مشروع التفوق</title>
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/index.css" />
+    <!-- FONT AWSOME -->
+    <script
+      src="https://kit.fontawesome.com/206351b6e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--// FONT AWSOME //-->
   </head>
-  <body class=" bg-black-grey px-5 py-1 transition text-white">
+  <body class="transition-all bg-black-grey px-5 py-1 text-white">
     <!-- NAVBAR -->
-    <nav class="sticky bg-black-grey top-0 rounded-sm max-w-screen">
+    <nav class="z-10 sticky block bg-black-grey top-0 rounded-sm max-w-screen">
       <div class="flex flex-row items-center text-center justify-between">
         <!-- Logo -->
         <div class="w-20">
           <a href="#main">
-            <img 
-            src="./images/logo.png" 
-            alt="Logo"
-            class=" rounded-full"
-            >
-            
-            
+            <img src="./images/logo.png" alt="Logo" class="rounded-full" />
           </a>
           <p class="font-bold">قسم العلوم</p>
         </div>
-        <div id="ul-container" class="w-[50%]">
-          <ul class="flex justify-evenly md:flex-row flex-col" dir="rtl">
+        <!-- Normal menu -->
+        <div class="ul-container w-[50%] hidden md:block">
+          <ul
+            id="normal-menu-list"
+            class="flex justify-evenly md:flex-row flex-col"
+            dir="rtl"
+          >
             <li><a href="#main">الصفحة الرئيسية</a></li>
             <li><a href="#about">عن الموقع</a></li>
             <li><a href="./src/game.html">العب</a></li>
-            <li><a href="#">تواصل معنا</a> </li>
+            <li><a href="#">تواصل معنا</a></li>
             <li><a href="#">QrCode</a></li>
           </ul>
+        </div>
+        <!--// Normal menu //-->
+        <!-- Hambuger menu -->
+        <div
+          id="burger-container"
+          class="ul-container w-fit md:hidden text-right"
+        >
+          <div class="absolute right-0 top-10">
+            <input class="hidden" type="checkbox" id="burger-btn" />
+            <label class="cursor-pointer" for="burger-btn">
+              <i id="burger-icon" class="fa-solid fa-bars"></i>
+            </label>
+          </div>
 
+          <ul
+            id="burger-menu-list"
+            class="flex top-full right-0 hidden absolute bg-jet-gray w-[50vw] flex-col"
+            
+          >
+            <li class="hover:bg-info p-5 w-full text-left">
+              <a class="block" href="#main">الصفحة الرئيسية</a>
+            </li>
+            <li class="hover:bg-info p-5 w-full text-left">
+              <a class="block" href="#about">عن الموقع</a>
+            </li>
+            <li class="hover:bg-info p-5 w-full text-left">
+              <a class="block" href="./src/game.html">العب</a>
+            </li>
+            <li class="hover:bg-info p-5 w-full text-left">
+              <a class="block" href="#">تواصل معنا</a>
+            </li>
+            <li class="hover:bg-info p-5 w-full text-left">
+              <a class="block" href="#">QrCode</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <hr class="mt-1">
+      <!--// Hambuger menu //-->
+
+      <hr class="mt-1" />
     </nav>
     <!--// NAVBAR //-->
 
     <!-- CONTAINER -->
-    <div  class="container w-full mx-[auto] ">
-      <div id="main" class="h-screen pt-36">
-        <p>الالة الحاسبة: <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquid voluptate, veritatis quos iure molestiae, eveniet atque possimus tenetur quia eius nisi labore unde temporibus reiciendis veniam harum aliquam officiis perferendis fugiat hic, nihil sed explicabo illum. Dolorem architecto quibusdam reprehenderit labore blanditiis voluptatum facilis, libero accusamus eaque! Voluptas, beatae?</p>
+    <div class="container w-full mx-[auto]">
+      <div id="main" class="h-screen pt-36 text-center">
+        <h1 class="text-4xl">برنامج #1</h1>
         <!-- CALCULATOR -->
-        <div class="container mt-5 mx-auto  text-center max-w-[500px] text-white">
+        <div
+          class="container mt-5 mx-auto text-center max-w-[500px] text-white"
+        >
           <!-- HEADER -->
           <header
-          class="font-bold flex flex-col items-center bg-brownish-gray max-w-full max-h-[285px] py-[34px] px-[50px]"
+            class="font-bold flex flex-col items-center bg-brownish-gray max-w-full max-h-[285px] py-[34px] px-[50px]"
           >
-          <h1 class="text-[28px]">تحويلات ⇄ بين وحدات الحرارة</h1>
-          <input
-          type="number"
-          value="0"
-          id="input-el"
-          autocomplete="off"
-          class="bg-black-grey border border-main rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
-          maxlength="4"
-          />
-          <button
-          id="convert-btn"
-          class="bg-off-white text-[#3D3D3D] py-[9px] px-7 rounded-lg mt-6"
-          >
-          تحويل
-        </button>
-      </header>
-      <!--// HEADER //-->
-      
-      <!-- MAIN -->
-      <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">سلسيوس(C°), </h2>
-          <p id="meter-feet" class="text-info">
-            𝑥 سلسيوس = 𝑥 فهرنهايت <br> 𝑥 سلسيوس = 𝑥 كلفن
-          </p>
+            <h1 class="text-[28px]">تحويلات ⇄ بين وحدات الحرارة</h1>
+            <input
+              type="number"
+              value="0"
+              id="input-el"
+              autocomplete="off"
+              class="bg-black-grey border border-main rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
+              maxlength="4"
+            />
+            <button
+              id="convert-btn"
+              class="bg-off-white text-[#3D3D3D] py-[9px] px-7 rounded-lg mt-6"
+            >
+              تحويل
+            </button>
+          </header>
+          <!--// HEADER //-->
+
+          <!-- MAIN -->
+          <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">سلسيوس(C°),</h2>
+              <p id="meter-feet" class="text-info">
+                𝑥 سلسيوس = 𝑥 فهرنهايت <br />
+                𝑥 سلسيوس = 𝑥 كلفن
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">فهرنهايت(F°)</h2>
+              <p id="litre-gallon" class="text-info">
+                𝑥 فهرنهايت = 𝑥 سلسيوس <br />
+                𝑥 فهرنهايت = 𝑥 كلفن
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
+              <p id="kilogram-pound" class="text-info">
+                𝑥 كلفن = 𝑥 سلسيوس <br />
+                𝑥 كلفن = 𝑥 فهرنهايت
+              </p>
+            </div>
+          </main>
+          <!--// MAIN //-->
         </div>
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">فهرنهايت(F°)</h2>
-          <p id="litre-gallon" class="text-info">
-            𝑥 فهرنهايت = 𝑥 سلسيوس <br> 𝑥 فهرنهايت = 𝑥 كلفن 
-          </p>
-        </div>
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
-          <p id="kilogram-pound" class="text-info">
-            𝑥 كلفن = 𝑥 سلسيوس <br> 𝑥 كلفن = 𝑥 فهرنهايت
-          </p>
-        </div>
-      </main>
-      <!--// MAIN //-->
-    </div>
-    <!-- CALCULATOR -->
+        <!-- CALCULATOR -->
       </div>
       <div id="about" class="h-screen pt-36">
-        <p>About: <br>Aboutasdkasddasd Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit aliquid voluptate, veritatis quos iure molestiae, eveniet atque possimus tenetur quia eius nisi labore unde temporibus reiciendis veniam harum aliquam officiis perferendis fugiat hic, nihil sed explicabo illum. Dolorem architecto quibusdam reprehenderit labore blanditiis voluptatum facilis, libero accusamus eaque! Voluptas, beatae?</p>
+        <p>
+          About: <br />Aboutasdkasddasd Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Odit aliquid voluptate, veritatis quos iure
+          molestiae, eveniet atque possimus tenetur quia eius nisi labore unde
+          temporibus reiciendis veniam harum aliquam officiis perferendis fugiat
+          hic, nihil sed explicabo illum. Dolorem architecto quibusdam
+          reprehenderit labore blanditiis voluptatum facilis, libero accusamus
+          eaque! Voluptas, beatae?
+        </p>
       </div>
-      
     </div>
     <!--// CONTAINER //-->
-
 
     <!-- SCRIPTS -->
     <script type="module" src="/main.js"></script>
     <script type="module" src="./src/js/calculator.js"></script>
+    <script type="module" src="./src/js/menu.js"></script>
+
     <!-- SCRIPTS -->
   </body>
 </html>
