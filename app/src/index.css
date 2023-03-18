@@ -13,9 +13,9 @@
       
     }
     @keyframes slide {
-      0%, 1% {transform: translateY(50px);}
-      50%, 51% {transform: translateY(100px);}
-      99%, 100% {transform: translateY(0px);}
+      0%, 1% {transform: translateY(30px);}
+      30%, 31% {transform: translateY(50px);}
+      70%, 100% {transform: translateY(0px);}
     }
     .animate-slide{
       animation: slide 1s ease-out;
@@ -24,8 +24,3 @@
   }
 
 
-@layer utilities{
-  .animated-element{
-    @apply animate-slide
-  }
-}
