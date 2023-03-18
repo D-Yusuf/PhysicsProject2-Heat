@@ -17,4 +17,16 @@ function isChecked(){
         bugerIcon.classList.remove('rotate-90')
     }
 }
+
+burgerMenu.addEventListener('click', (e)=>{
+   
+    
+        burgerMenu.classList.add('hidden')
+        bugerIcon.classList.remove('rotate-90')
+        console.log('aaa')
+    
+
+   
+    
+})
 burgerBtn.addEventListener('change', isChecked)

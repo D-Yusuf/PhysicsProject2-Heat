@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "src/game.html",
+    "src/code.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
