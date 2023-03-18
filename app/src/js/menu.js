@@ -8,8 +8,9 @@ const bugerIcon = document.querySelector('#burger-icon')
 function isChecked(){
     if(burgerBtn.checked){
         burgerMenu.classList.remove('hidden')
-        bugerIcon.classList.add('rotate-90')
+        burgerMenu.classList.add('animate-slide')
         
+        bugerIcon.classList.add('rotate-90')
     }else{
         
         burgerMenu.classList.add('hidden')

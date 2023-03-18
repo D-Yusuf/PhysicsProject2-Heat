@@ -19,7 +19,8 @@ module.exports = {
         "main":"#F4F4F4",
         "title": "#5A537B",
         "info": "#353535"
-      }
+      },
+      
     },
   },
   plugins: [],
