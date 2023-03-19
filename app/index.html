@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="ar">
+<html class="scroll-smooth" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -15,7 +15,7 @@
     ></script>
     <!--// FONT AWSOME //-->
   </head>
-  <body class="transition-all bg-black-grey px-5 py-1 text-white">
+  <body class=" overflow-x-hidden bg-black-grey px-5 py-1 text-white">
     <!-- NAVBAR -->
     <nav class="z-10 sticky block bg-black-grey top-0 rounded-sm max-w-screen">
       <div class=" flex flex-row items-center text-center justify-between">
@@ -27,20 +27,21 @@
           <p class="font-bold">قسم العلوم</p>
         </div>
         <!-- Normal menu -->
-        <div class="ul-container w-[50%] hidden md:block">
+        <div class="ul-container w-auto hidden md:block">
           <ul
             id="normal-menu-list"
             class="flex justify-around md:flex-row "
             dir="rtl"
           >
-            <li><a href="#main">الصفحة الرئيسية</a></li>
-            <li><a href="#about">عن الموقع</a></li>
-            <li><a href="./src/game.html">العب</a></li>
-            <li><a href="#">تواصل معنا</a></li>
-            <li><a href="./src/code.html">QrCode</a></li>
+            <li class="mx-4"><a href="#main">الصفحة الرئيسية</a></li>
+            <li class="mx-4"><a href="#about">عن الموقع</a></li>
+            <li class="mx-4"><a href="./src/game.html">العب</a></li>
+            <li class="mx-4"><a href="#">تواصل معنا</a></li>
+            <li class="mx-4"><a href="./src/code.html">QrCode</a></li>
           </ul>
         </div>
         <!--// Normal menu //-->
+
         <!-- Hambuger menu -->
         <div
           id="burger-container"
@@ -50,31 +51,32 @@
             <!-- Burger icon -->
             <input class="hidden" type="checkbox" id="burger-btn" />
             <label class="cursor-pointer" for="burger-btn">
-              <i id="burger-icon" class="fa-solid fa-2xl fa-bars"></i>
+              <i id="burger-icon" class=" fa-solid fa-2xl fa-bars"></i>
             </label>
             <!--// Burger icon //-->
           </div>
 
           <ul
             id="burger-menu-list"
-            class="hidden flex justify-around right-0  absolute bg-jet-gray w-[60vw] h-[50vh] flex-col"
+            class="hidden text-2xl flex justify-around right-0  absolute bg-jet-gray w-[60vw] h-[50vh] flex-col"
             
           >
-            <li class="hover:bg-info p-5 w-full text-left">
-              <a class="block" href="#main">الصفحة الرئيسية</a>
+            <li class="hover:bg-info active:font-bold transition-all duration-500 p-5 w-full text-right">
+              <a href="#main">الصفحة الرئيسية</a>
             </li>
-            <li class="hover:bg-info p-5 w-full text-left">
-              <a class="block" href="#about">عن الموقع</a>
+            <li class="hover:bg-info active:font-bold transition-all duration-500 p-5 w-full text-right">
+              <a href="#about">عن الموقع</a>
             </li>
-            <li class="hover:bg-info p-5 w-full text-left">
-              <a class="block" href="./src/game.html">العب</a>
+            <li class="hover:bg-info active:font-bold transition-all duration-500 p-5 w-full text-right">
+              <a href="./src/game.html">العب</a>
             </li>
-            <li class="hover:bg-info p-5 w-full text-left">
-              <a class="block" href="#">تواصل معنا</a>
+            <li class="hover:bg-info active:font-bold transition-all duration-500 p-5 w-full text-right">
+              <a href="#">تواصل معنا</a>
             </li>
-            <li class="hover:bg-info p-5 w-full text-left">
-              <a class="block" href="./src/code.html">QrCode</a>
+            <li class="hover:bg-info active:font-bold transition-all duration-500 p-5 w-full text-right">
+              <a href="./src/code.html">QrCode</a>
             </li>
+            <button class="bg-off-white w-fit self-center text-black rounded px-3 py-1 font-bold hover:bg-gray-white"><a href="#">المزيد</a></button>
           </ul>
         </div>
       </div>
@@ -107,7 +109,7 @@
             />
             <button
               id="convert-btn"
-              class="bg-off-white text-[#3D3D3D] py-[9px] px-7 rounded-lg mt-6"
+              class="bg-off-white text-info py-[9px] px-7 rounded-lg mt-6"
             >
               تحويل
             </button>

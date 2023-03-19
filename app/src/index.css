@@ -9,24 +9,22 @@
       margin: 0;
     }
     a{
-      transition: all 1s;
+      @apply block;
     }
     *{
-      transition: all 500ms;
-      
-      
+      @apply transition-all duration-500;
     }
     @keyframes slide {
       
       /* 0%, 1% {transform: translateY(30px);} */
       /* 30%, 31% {transform: translateY(50px);} */
-      0%, 1% {@apply top-1/2; @apply pl-3;}
+      0%, 1% {@apply top-1/2 pb-5 opacity-0;}
       50%, 100% {@apply top-full; }
       /* 70%, 100% {transform: translateY(0px);} */
     }
     .animate-slide{
       
-      animation: slide 1s ease-in-out;
+      animation: slide 500ms ease;
       animation-fill-mode: forwards;
     }
   }
