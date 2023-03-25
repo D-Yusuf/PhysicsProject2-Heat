@@ -1,51 +1,61 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
 let inputEl = document.getElementById("input-el");
 let convertBtn = document.getElementById("convert-btn");
-let firstText = document.getElementById("meter-feet");
-let secondText = document.getElementById("litre-gallon");
-let thirdText = document.getElementById("kilogram-pound");
-const metric = {
-  meter: (value) => {
-    return (value / 3.281).toFixed(3);
-  },
-  litre: (value) => {
-    return (value / 0.264).toFixed(3);
-  },
-  kilogram: (value) => {
-    return (value / 2.204).toFixed(3);
-  },
-};
-const imperial = {
-  foot: (value) => {
-    return (value * 3.281).toFixed(3);
-  },
-  gallon: (value) => {
-    return (value * 0.264).toFixed(3);
-  },
-  pound: (value) => {
-    return (value * 2.204).toFixed(3);
-  },
-};
+let firstText = document.getElementById("first-box");
+let secondText = document.getElementById("second-box");
+let thirdText = document.getElementById("third-box");
 
+let celcius;
+let fehrenhite;
+let kelvin;
 
-export function compare(changeText, value, metricKey, imperialKey, metricFunction, imperialFunction) {
+inputEl.addEventListener('click', ()=>{inputEl.value = '';})
+
+convertBtn.addEventListener('click', render);
+
+function render(){
+    // const C_to_F = (celcius * 9/5) + 32;
+    // const C_to_K = celcius * 1 + 273;
+    const convertedUnits = convert();
+    let celciusObject = convertedUnits.find(unit => unit.name === 'Celcius');
+    let fehrenhiteObject = convertedUnits.find(unit => unit.name === 'Fehrenhite');
+    let kelvinObject = convertedUnits.find(unit => unit.name === 'Kelvin');
     
-    changeText.innerHTML = `${value} ${metricKey} = ${imperialFunction} ${imperialKey} <br> ${value} ${imperialKey} = ${metricFunction} ${metricKey}`
-  
+    firstText.innerHTML = `
+    ${celcius}°C  = ${celciusObject.fehrenhite}°F  <br/>
+    ${celcius}°C  = ${celciusObject.kelvin}K `
+    // ---------------------------------------------------
+    secondText.innerHTML = `
+    ${fehrenhite}°F  = ${fehrenhiteObject.celcius}°C  <br/>
+    ${fehrenhite}°F  = ${fehrenhiteObject.kelvin}K `
+    // ---------------------------------------------------
+    thirdText.innerHTML = `
+    ${kelvin}K  = ${kelvinObject.celcius}°C  <br/>
+    ${kelvin}K  = ${kelvinObject.fehrenhite}°F `
+
+function convert(){
+    celcius = inputEl.value;
+    fehrenhite = inputEl.value;
+    kelvin = inputEl.value;
+    const unitsConversion = [
+        {
+            name: 'Celcius',
+            unit: '°C',
+            fehrenhite: Math.round((celcius * 9/5) + 32),
+            kelvin : celcius * 1 + 273,
+        },
+        {
+            name: 'Fehrenhite',
+            unit: '°F',
+            celcius: Math.round((fehrenhite - 32) * 5/9),
+            kelvin: Math.round(((fehrenhite - 32) * 5/9) + 273),
+        },
+        {
+            name: 'Kelvin',
+            unit: 'K',
+            celcius: kelvin - 273,
+            fehrenhite: Math.round(((kelvin - 273) * 9/5) + 32),
+        },
+    ]
+    return unitsConversion
+};
 }
-// Self calling function
-export function compareAll(){
-  let value = inputEl.value
-  compare(firstText,value, "meters", "feet", metric.meter(value), imperial.foot(value))
-  compare(secondText,value, "litres", "gallons", metric.litre(value), imperial.gallon(value))
-  compare(thirdText,value, "kilograms", "pounds", metric.kilogram(value), imperial.pound(value))
-}
-
-convertBtn.addEventListener("click",()=>compareAll())
-inputEl.addEventListener("focus", ()=>inputEl.value = "")
-
-

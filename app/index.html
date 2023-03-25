@@ -98,42 +98,47 @@
             class="font-bold flex flex-col items-center bg-brownish-gray max-w-full max-h-[285px] py-[34px] px-[50px]"
           >
             <h1 class="text-[28px]">تحويلات ⇄ بين وحدات الحرارة</h1>
+            
             <input
               type="number"
               value="0"
               id="input-el"
               autocomplete="off"
               class="bg-black-grey border border-main rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
-              maxlength="4"
+              min="0"
+              
             />
             <button
+            
               id="convert-btn"
               class="bg-off-white text-info py-[9px] px-7 rounded-lg mt-6"
             >
               تحويل
             </button>
+
+           
           </header>
           <!--// HEADER //-->
 
           <!-- MAIN -->
           <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
             <div class="bg-white p-6">
-              <h2 class="text-xl text-title font-bold">سلسيوس(C°),</h2>
-              <p id="meter-feet" class="text-info">
+              <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
+              <p id="first-box" class="text-info">
                 𝑥 سلسيوس = 𝑥 فهرنهايت <br />
                 𝑥 سلسيوس = 𝑥 كلفن
               </p>
             </div>
             <div class="bg-white p-6">
-              <h2 class="text-xl text-title font-bold">فهرنهايت(F°)</h2>
-              <p id="litre-gallon" class="text-info">
+              <h2 class="text-xl text-title font-bold">فهرنهايت(°F)</h2>
+              <p id="second-box" class="text-info">
                 𝑥 فهرنهايت = 𝑥 سلسيوس <br />
                 𝑥 فهرنهايت = 𝑥 كلفن
               </p>
             </div>
             <div class="bg-white p-6">
               <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
-              <p id="kilogram-pound" class="text-info">
+              <p id="third-box" class="text-info">
                 𝑥 كلفن = 𝑥 سلسيوس <br />
                 𝑥 كلفن = 𝑥 فهرنهايت
               </p>
@@ -141,7 +146,7 @@
           </main>
           <!--// MAIN //-->
         </div>
-        <!-- CALCULATOR -->
+        <!--// CALCULATOR //-->
       </div>
       <div id="about" class="h-screen pt-36">
         <p>
@@ -160,6 +165,7 @@
     <!-- SCRIPTS -->
     <script type="module" src="/main.js"></script>
     <script type="module" src="./src/js/calculator.js"></script>
+    <!-- <script type="module" src="./src/js/calculator2.js"></script> -->
     <script type="module" src="./src/js/menu.js"></script>
 
     <!-- SCRIPTS -->
