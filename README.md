@@ -6,4 +6,4 @@ Made using:
 * TailwindCSS 
 * ViteJs  
 
-==**Deployed in Netlify**==
+==Deployed in Netlify==
