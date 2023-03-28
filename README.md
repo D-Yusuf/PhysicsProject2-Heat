@@ -10,4 +10,3 @@ Made using:
 * ViteJs  
 
 **Deployed in Netlify**
-I need to highlight these ==very important words==.
