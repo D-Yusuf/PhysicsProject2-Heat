@@ -4,9 +4,9 @@ Another physics project for school. The teacher liked the idea of making a websi
 
 ------
 Made using: 
-* Vanilla Js
-* TailwindCSS 
-* ViteJs  
+>* Vanilla Js
+>* TailwindCSS 
+>* ViteJs  
 
 **Deployed in Netlify**
 I need to highlight these ==very important words==.
