@@ -16,12 +16,12 @@
       -webkit-tap-highlight-color: transparent;
     }
     @keyframes slide {
-      0%, 1% {@apply top-1/2 pb-5 opacity-0;}
-      50%, 100% {@apply top-full; }
+      0%, 1% {@apply left-80 opacity-0;}
+      50%, 100% {@apply left-0 right-0 opacity-100; }
     }
     @keyframes slideRemoved {
-      0%, 1% {@apply top-full; }
-      50%, 100% {@apply top-1/2 pb-5 opacity-0;}
+      0%, 1% {@apply left-0 right-0; }
+      50%, 100% {@apply left-80 opacity-0;}
     }
     .animate-slide{
       

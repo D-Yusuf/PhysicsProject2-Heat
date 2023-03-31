@@ -1,35 +1,30 @@
-const normalMenu = document.querySelector('#normal-menu-list')
+const normalMenu = $('#normal-menu-list');
 
-const burgerContainer = document.querySelector('#buger-container')
-const burgerMenu = document.querySelector('#burger-menu-list')
-const burgerBtn = document.querySelector('#burger-btn')
-const bugerIcon = document.querySelector('#burger-icon')
+const burgerContainer = $('#buger-container');
+const burgerMenu = $('#burger-menu-list');
+const burgerBtn = $('#burger-btn');
+const bugerIcon = $('#burger-icon');
 
 //-----------------------------------------------------------//
-burgerBtn.addEventListener('change', isChecked)
+burgerBtn.on('change', isChecked);
 function isChecked(){
-    if(burgerBtn.checked){
-        burgerMenu.classList.remove('hidden')
-        burgerMenu.classList.remove('animate-remove-slide')
-        burgerMenu.classList.add('animate-slide')
+    if(burgerBtn.prop('checked')){
+        burgerMenu.removeClass('hidden animate-remove-slide').addClass('animate-slide');
         
-        bugerIcon.classList.add('rotate-90')
-    }else{
+    } else {
+        burgerMenu.removeClass('animate-slide').addClass('animate-remove-slide');
         
-        burgerMenu.classList.remove('animate-slide')
-        burgerMenu.classList.add('animate-remove-slide')
-        bugerIcon.classList.remove('rotate-90')
-        setTimeout(()=>{burgerMenu.classList.add('hidden')}, 500)
+        setTimeout(() => {
+            burgerMenu.addClass('hidden');
+        }, 500);
     }
 }
 //-----------------------------------------------------------//
 
 // remove menu when clicking links
-burgerMenu.addEventListener('click', (e)=>{
-
-        burgerMenu.classList.add('hidden')
-        bugerIcon.classList.remove('rotate-90')
-        console.log(burgerMenu)
-        console.log('aaa')
-     
-})
+burgerMenu.on('click', (e) => {
+    burgerMenu.addClass('hidden');
+    
+    console.log(burgerMenu);
+    console.log('aaa');
+});
