@@ -14,17 +14,23 @@ function isChecked(){
     } else {
         burgerMenu.removeClass('animate-slide').addClass('animate-remove-slide');
         
-        setTimeout(() => {
-            burgerMenu.addClass('hidden');
-        }, 500);
+        addHiddenClass()
     }
 }
 //-----------------------------------------------------------//
 
 // remove menu when clicking links
 burgerMenu.on('click', (e) => {
-    burgerMenu.addClass('hidden');
-    
+    burgerMenu.removeClass('animate-slide').addClass('animate-remove-slide');
+    addHiddenClass()
     console.log(burgerMenu);
-    console.log('aaa');
+    burgerBtn.prop('checked', false)
+    
 });
+
+//-----------------------------------------------------------//
+function addHiddenClass(){
+    setTimeout(() => {
+        burgerMenu.addClass('hidden');
+    }, 500);
+}
