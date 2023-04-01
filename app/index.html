@@ -18,10 +18,10 @@
     ></script>
     <!--// FONT AWSOME //-->
   </head>
-  <body class=" overflow-x-hidden bg-black-grey px-5 py-1 text-white">
+  <body class="overflow-x-hidden bg-black-grey  py-1 text-white">
     <!-- NAVBAR -->
-    <nav class="z-10 sticky block bg-black-grey top-0 rounded-sm max-w-screen">
-      <div class=" flex flex-row items-center text-center justify-between">
+    <nav class="z-10 sticky block bg-black-grey top-0 rounded-sm sm:mx-1 max-w-screen">
+      <div class="flex flex-row items-center text-center justify-between">
         <!-- Logo -->
         <div class="w-20">
           <a href="#main">
@@ -33,13 +33,13 @@
         <div class="ul-container w-auto hidden md:block">
           <ul
             id="normal-menu-list"
-            class="flex justify-around md:flex-row "
+            class="flex justify-around md:flex-row"
             dir="rtl"
           >
             <li class="mx-4"><a href="#main">الصفحة الرئيسية</a></li>
             <li class="mx-4"><a href="#about">عن الموقع</a></li>
             <li class="mx-4"><a href="./src/game.html">العب</a></li>
-            <li class="mx-4"><a href="#">تواصل معنا</a></li>
+            <li class="mx-4"><a href="#contact">تواصل معنا</a></li>
             <li class="mx-4"><a href="./src/code.html">QrCode</a></li>
           </ul>
         </div>
@@ -54,123 +54,172 @@
             <!-- Burger icon -->
             <input class="hidden" type="checkbox" id="burger-btn" />
             <label class="cursor-pointer" for="burger-btn">
-              <i id="burger-icon" class=" fa-solid fa-2xl fa-bars"></i>
+              <i id="burger-icon" class="fa-solid fa-2xl fa-bars"></i>
               <!-- <i  class="fa-solid fa-ellipsis fa-2xl"></i> -->
               <!-- <i id="burger-icon" class="fa-solid  fa-ellipsis-vertical"></i> -->
-
             </label>
             <!--// Burger icon //-->
           </div>
-          
+
           <ul
-          id="burger-menu-list"
-          class="hidden text-2xl justify-around right-0 top-0 fixed bg-jet-gray w-screen max-h-screen overflow-y-scroll text-center"
-          
+            id="burger-menu-list"
+            class="hidden text-2xl justify-around right-0 top-0 fixed bg-jet-gray w-screen max-h-screen overflow-y-scroll text-center"
           >
-          <li class="hover:bg-info active:font-bold transition-all duration-500 w-full ">
+            <li
+              class="hover:bg-info active:font-bold transition-all duration-500 w-full"
+            >
               <a class="block py-20" href="#main">الصفحة الرئيسية</a>
             </li>
-            <li class="hover:bg-info active:font-bold transition-all duration-500 w-full ">
+            <li
+              class="hover:bg-info active:font-bold transition-all duration-500 w-full"
+            >
               <a class="block py-20" href="#about">عن الموقع</a>
             </li>
-            <li class="hover:bg-info active:font-bold transition-all duration-500 w-full ">
+            <li
+              class="hover:bg-info active:font-bold transition-all duration-500 w-full"
+            >
               <a class="block py-20" href="./src/game.html">العب</a>
             </li>
-            <li class="hover:bg-info active:font-bold transition-all duration-500 w-full ">
-              <a class="block py-20" href="#">تواصل معنا</a>
+            <li
+              class="hover:bg-info active:font-bold transition-all duration-500 w-full"
+            >
+              <a class="block py-20" href="#contact">تواصل معنا</a>
             </li>
-            <li class="hover:bg-info active:font-bold transition-all duration-500 w-full ">
+            <li
+              class="hover:bg-info active:font-bold transition-all duration-500 w-full"
+            >
               <a class="block py-20" href="./src/code.html">QrCode</a>
             </li>
           </ul>
         </div>
       </div>
       <!--// Hambuger menu //-->
-      
+
       <hr class="mt-1" />
     </nav>
     <!--// NAVBAR //-->
-    
+
     <!-- CONTAINER -->
-    <div class="container w-full mx-[auto]">
-  <!-- APPS -->
-  <div id="main" class="grow min-h-screen pt-36 text-center">
-  <!-- CALCULATOR -->
-          <h1 class="text-4xl">برنامج #1</h1>
-          <div
+    <div class="container w-full mx-[auto] p-5">
+      <!-- APPS -->
+      <div id="main" class="grow min-h-screen pt-36 text-center">
+        <!-- CALCULATOR -->
+        <h1 class="text-4xl">برنامج #1</h1>
+        <div
           class="container mt-5 mx-auto text-center max-w-[500px] text-white"
-          >
+        >
           <!-- HEADER -->
           <header
-          class="font-bold flex flex-col items-center bg-brownish-gray max-w-full max-h-[285px] py-[34px] px-[50px]"
+            class="font-bold flex flex-col items-center bg-brownish-gray max-w-full max-h-[285px] py-[34px] px-[50px]"
           >
-          <h1 class="text-[28px]">تحويلات ⇄ بين وحدات الحرارة</h1>
-          
-          <input
-          type="number"
-          value="0"
-          id="input-el"
-          autocomplete="off"
-          class="bg-black-grey border border-main rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
-          min="0"
-          
-          />
-          <button
-          
-          id="convert-btn"
-          class="bg-off-white text-info py-[9px] px-7 rounded-lg mt-6"
-          >
-          تحويل
-        </button>
-        
-        
-      </header>
-      <!--// HEADER //-->
-      
-      <!-- MAIN -->
-      <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
-          <p id="first-box" class="text-info">
-            𝑥 سلسيوس = 𝑥 فهرنهايت <br />
-            𝑥 سلسيوس = 𝑥 كلفن
-          </p>
+            <h1 class="text-[28px]">تحويلات ⇄ بين وحدات الحرارة</h1>
+
+            <input
+              type="number"
+              value="0"
+              id="input-el"
+              autocomplete="off"
+              class="bg-black-grey border border-main rounded-md text-4xl text-center px-0 w-28 h-16 mt-6"
+              min="0"
+            />
+            <button
+              id="convert-btn"
+              class="bg-off-white text-info py-[9px] px-7 rounded-lg mt-6"
+            >
+              تحويل
+            </button>
+          </header>
+          <!--// HEADER //-->
+
+          <!-- MAIN -->
+          <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
+              <p id="first-box" class="text-info">
+                𝑥 سلسيوس = 𝑥 فهرنهايت <br />
+                𝑥 سلسيوس = 𝑥 كلفن
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">فهرنهايت(°F)</h2>
+              <p id="second-box" class="text-info">
+                𝑥 فهرنهايت = 𝑥 سلسيوس <br />
+                𝑥 فهرنهايت = 𝑥 كلفن
+              </p>
+            </div>
+            <div class="bg-white p-6">
+              <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
+              <p id="third-box" class="text-info">
+                𝑥 كلفن = 𝑥 سلسيوس <br />
+                𝑥 كلفن = 𝑥 فهرنهايت
+              </p>
+            </div>
+          </main>
+          <!--// MAIN //-->
         </div>
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">فهرنهايت(°F)</h2>
-          <p id="second-box" class="text-info">
-            𝑥 فهرنهايت = 𝑥 سلسيوس <br />
-            𝑥 فهرنهايت = 𝑥 كلفن
-          </p>
-        </div>
-        <div class="bg-white p-6">
-          <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
-          <p id="third-box" class="text-info">
-            𝑥 كلفن = 𝑥 سلسيوس <br />
-            𝑥 كلفن = 𝑥 فهرنهايت
-          </p>
-        </div>
-      </main>
-      <!--// MAIN //-->
+      </div>
+      <!--// CALCULATOR //-->
+
+      <div
+        id="about"
+        dir="rtl"
+        class="grow flex flex-col gap-10 pt-28 min-h-screen"
+      >
+        <h1 class="text-4xl">هذا البرنامج عن:</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          nostrum obcaecati atque in excepturi dicta dolorum eligendi sint amet,
+          autem, suscipit laudantium quo ut quasi odio! Ea cumque eum voluptas
+          explicabo quaerat quae vitae fugiat, vel quia delectus iste deserunt
+          odio quibusdam similique aperiam aspernatur in expedita accusamus
+          veritatis non?
+        </p>
+      </div>
     </div>
-  </div>
-  <!--// CALCULATOR //-->
+    <!--// CONTAINER //-->
+    <!-- CONTACT US -->
+    <div
+      id="contact"
+      class="grow flex items-center flex-col gap-10 bg-black relative bottom-0 right-0 sm:py-10 py-5"
+    >
+      <h1 class="text-4xl">تواصل معنا</h1>
+      <p id="copyright" class="absolute left-0 md:text-base text-sm bottom-1">Alreyada ©<span id="year">2020</span></p>
+      
+      <ul class="flex w-1/2 items-center justify-center">
+        <li class="mx-10">
+          <a href="#"
+            ><i class="fa-brands fa-linkedin fa-2xl hover:text-gray-white"></i
+          ></a>
+        </li>
+        <li class="mx-10">
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-instagram fa-2xl hover:text-gray-white"
+            ></i
+          ></a>
+        </li>
+        <li class="mx-10">
+          <a href="#"
+            ><i class="fa-solid fa-envelope fa-2xl hover:text-gray-white"></i
+          ></a>
+        </li>
+        <li class="mx-10">
+          <a href="#"
+            ><i
+              class="fa-brands fa-square-github fa-2xl hover:text-gray-white"
+            ></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <!--// CONTACT US //-->
 
-<div id="about" dir="rtl" class="grow flex flex-col gap-10 pt-28 min-h-screen">
-  <h1 class="text-4xl">هذا البرنامج عن:</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nostrum obcaecati atque in excepturi dicta dolorum eligendi sint amet, autem, suscipit laudantium quo ut quasi odio! Ea cumque eum voluptas explicabo quaerat quae vitae fugiat, vel quia delectus iste deserunt odio quibusdam similique aperiam aspernatur in expedita accusamus veritatis non?
-  </p>
-</div>
-</div>
-<!--// CONTAINER //-->
+    <!-- SCRIPTS -->
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./src/js/calculator.js"></script>
+    <!-- <script type="module" src="./src/js/calculator2.js"></script> -->
+    <script type="module" src="./src/js/menu.js"></script>
 
-<!-- SCRIPTS -->
-<script type="module" src="/main.js"></script>
-<script type="module" src="./src/js/calculator.js"></script>
-<!-- <script type="module" src="./src/js/calculator2.js"></script> -->
-<script type="module" src="./src/js/menu.js"></script>
-
-<!-- SCRIPTS -->
-</body>
+    <!-- SCRIPTS -->
+  </body>
 </html>
