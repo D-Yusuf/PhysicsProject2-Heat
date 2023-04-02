@@ -23,7 +23,7 @@
     <nav class="z-10 sticky block bg-black-grey top-0 rounded-sm sm:mx-1 max-w-screen">
       <div class="flex flex-row items-center text-center justify-between">
         <!-- Logo -->
-        <div class="w-20">
+        <div class="w-20 lg:w-24 xl:w-28">
           <a href="#main">
             <img src="./images/logo.png" alt="Logo" class="rounded-full" />
           </a>
@@ -36,11 +36,11 @@
             class="flex justify-around md:flex-row"
             dir="rtl"
           >
-            <li class="mx-4"><a href="#main">الصفحة الرئيسية</a></li>
-            <li class="mx-4"><a href="#about">عن الموقع</a></li>
-            <li class="mx-4"><a href="./src/game.html">العب</a></li>
-            <li class="mx-4"><a href="#contact">تواصل معنا</a></li>
-            <li class="mx-4"><a href="./src/code.html">QrCode</a></li>
+            <li class="lg:mx-8 xl:mx-12 mx-4"><a href="#main">الصفحة الرئيسية</a></li>
+            <li class="lg:mx-8 xl:mx-12 mx-4"><a href="#about">عن الموقع</a></li>
+            <li class="lg:mx-8 xl:mx-12 mx-4"><a href="https://itch.io">العب</a></li>
+            <li class="lg:mx-8 xl:mx-12 mx-4"><a href="#contact">تواصل معنا</a></li>
+            <li class="lg:mx-8 xl:mx-12 mx-4"><a href="./src/code.html">QrCode</a></li>
           </ul>
         </div>
         <!--// Normal menu //-->
@@ -78,7 +78,7 @@
             <li
               class="hover:bg-info active:font-bold transition-all duration-500 w-full"
             >
-              <a class="block py-20" href="./src/game.html">العب</a>
+              <a class="block py-20" href="https://itch.io">العب</a>
             </li>
             <li
               class="hover:bg-info active:font-bold transition-all duration-500 w-full"
@@ -180,46 +180,56 @@
     <!-- CONTACT US -->
     <div
       id="contact"
-      class="grow flex items-center flex-col bg-info relative bottom-0 right-0 sm:py-5 py-2"
+      class="grow flex flex-col bg-info relative bottom-0 right-0 md:py-5 py-2"
     >
       <!-- <h1 class="text-4xl self-end md:text-lg relative top-0 right-0" dir="rtl">تواصلوا معنا عبر:</h1> -->
-      <!-- <p id="copyright" class="fixed md:mx-2 mx-1 md:text-sm text-[10px] bottom-0 top-32 left-0">Alreyada ©<span id="year">2020</span></p> -->
       
-      <ul class="flex w-1/2 items-center justify-center">
-        <li id="linkedin" class="mx-10">
+      <!-- SOCIAL MEDIA ACCOUNTS -->
+      <ul class="flex self-start items-center justify-center">
+        <li id="linkedin" class="md:mx-5 mx-3 lg:mx-7">
           <a target="_blank" href="https://www.linkedin.com/in/yusuf-alnasiri-4b4546238/"
-            ><i class="fa-brands fa-linkedin hover:text-gray-white text-4xl"></i
-          ></a>
-        </li>
-        <li id="instagram" class="mx-10">
-          <a target="_blank" href="#"
+          ><i class="fa-brands fa-linkedin hover:text-gray-white text-4xl"></i
+            ></a>
+          </li>
+          <li id="instagram" class="md:mx-5 mx-3 lg:mx-7">
+            <a target="_blank" href="#"
             ><i
-              class="fa-brands fa-square-instagram hover:text-gray-white text-4xl"
+            class="fa-brands fa-square-instagram hover:text-gray-white text-4xl"
             ></i
-          ></a>
-        </li>
-        <li id="e-mail" class="mx-10">
-          <a target="_blank" href="#"
+            ></a>
+          </li>
+          <li id="e-mail" class="md:mx-5 mx-3 lg:mx-7">
+            <a target="_blank" href="#"
             ><i class="fa-solid fa-envelope hover:text-gray-white text-4xl"></i
-          ></a>
-        </li>
-        <li id="github" class="mx-10">
-          <a target="_blank" href="https://github.com/D-Yusuf"
-            ><i
+              ></a>
+            </li>
+            <li id="github" class="md:mx-5 mx-3 lg:mx-7">
+              <a target="_blank" href="https://github.com/D-Yusuf"
+              ><i
               class="fa-brands fa-square-github hover:text-gray-white text-4xl"
-            ></i
-          ></a>
-        </li>
-      </ul>
-    </div>
-    <!--// CONTACT US //-->
-
-    <!-- SCRIPTS -->
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="./src/js/calculator.js"></script>
-    <!-- <script type="module" src="./src/js/calculator2.js"></script> -->
-    <script type="module" src="./src/js/menu.js"></script>
-
-    <!-- SCRIPTS -->
-  </body>
-</html>
+              ></i
+              ></a>
+            </li>
+          </ul>
+          <!--// SOCIAL MEDIA ACCOUNTS //-->
+          <!-- Extras -->
+          <div dir="rtl" class="flex absolute md:text-lg text-base top-1 right-1">
+            صنع طلاب الريادة&nbsp;
+            <a class="underline text-blue-500 ring ring-blue-600 rounded-md" href="">
+              من هم؟
+          </a>
+          </div>
+          <p id="copyright" class="absolute md:text-sm text-[10px] bottom-1 right-1">Alreyada ©<span id="year">2020</span></p>
+          <!--// Extras //-->
+        </div>
+        <!--// CONTACT US //-->
+        
+        <!-- SCRIPTS -->
+        <script type="module" src="/main.js"></script>
+        <script type="module" src="./src/js/calculator.js"></script>
+        <!-- <script type="module" src="./src/js/calculator2.js"></script> -->
+        <script type="module" src="./src/js/menu.js"></script>
+        
+        <!-- SCRIPTS -->
+      </body>
+      </html>

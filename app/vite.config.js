@@ -6,7 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        game: 'src/game.html',
+        credits: 'src/credits.html',
         code: 'src/code.html',
         calculator: 'src/js/calculator.js',
         // entry: 'main.js',
