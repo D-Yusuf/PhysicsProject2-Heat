@@ -1,7 +1,10 @@
 let date = new Date();
 let year = $("#year")
-// year.text() = ;
+
+$(window).on('load', function() {
+    setYear();
+    
+});
 function setYear(){
-    year.text(date.getFullYear())
+  year.text(date.getFullYear());
 }
-setYear()

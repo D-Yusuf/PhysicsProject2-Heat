@@ -1,37 +1,40 @@
 export const projectileEquations = [
     {
-        name: 'اقصى ارتفاع',
+        name:'max-height',
         unit: "m",
         symbol: 'hmax',
         equation: 'ν∘²sin²θ/2g'
         
     },
     {
-        name: 'زمن اقصى ارتفاع',
+        name:'max-height-time',
         unit: 's',
         symbol: 't',
         equation: 'ν∘sinθ/g'
         
     },
     {
-        name: 'المدى',
+        name:'range',
         unit: 'm',
         symbol: 'R',
         equation: 'ν∘²sin2θ/g'
         
     },
     {
-        name: 'السرعة الافقية',
+        name:'horizontal-speed',
         unit: 'm/s',
         symbol: 'vᕁ',
         equation: 'ν∘cosθ'
         
     },
     {
-        name: 'معادلة المسار',
+        name:'path-equation',
         unit: '',
         symbol: 'y',
         equation: 'y = tanθ·x(-g/2v°²cos²θ)x²'
         
     },
 ]
+export function getEquations(){
+    return projectileEquations
+}

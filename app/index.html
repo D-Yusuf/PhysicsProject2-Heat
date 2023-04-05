@@ -214,36 +214,37 @@
               </div>
               <!--// Inputs //-->
               <button
+              id="calculate-btn"
               class="bg-off-white text-info py-[9px] px-7 rounded-lg mt-6"
               >
-              تحويل
+              احسب
             </button>
             <!-- OUTPUT CHOICES -->
             <div dir="rtl" id="output-choices" class="py-4 mt-3 flex w-full justify-between">
               
               <div class="flex flex-col text-sm ">
                 <label for="max-height">اقصى ارتفاع</label>
-                <input type="checkbox" name="output" id="max-height">
+                <input class="output-checkbox" type="checkbox" name="max-height" id="max-height">
               </div>
 
               <div class="flex flex-col text-sm">
                 <label for="max-height-time">زمن اقصى ارتفاع</label>
-                <input type="checkbox" name="output" id="max-height-time">
+                <input class="output-checkbox" type="checkbox" name="max-height-time" id="max-height-time">
               </div>
 
               <div class="flex flex-col text-sm">
                 <label for="range">المدى</label>
-                <input type="checkbox" name="output" id="range">
+                <input class="output-checkbox" type="checkbox" name="range" id="range">
               </div>
 
               <div class="flex flex-col text-sm">
                 <label for="horizontal-speed">السرعة الافقية</label>
-                <input type="checkbox" name="output" id="horizontal-speed">
+                <input class="output-checkbox" type="checkbox" name="horizontal-speed" id="horizontal-speed">
               </div>
                 
               <div class="flex flex-col text-sm">
                 <label for="path-equation">معادلة المسار</label>
-                <input type="checkbox" name="output" id="path-equation">
+                <input class="output-checkbox" type="checkbox" name="path-equation" id="path-equation">
               </div>
 
             </div>
@@ -251,8 +252,8 @@
             </header>
             <!--// HEADER //-->
 
-            <!-- MAIN -->
-            <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
+            <!-- OUTPUT SECTION -->
+            <main id="output-section" class="bg-main max-w-full px-5 py-7 grid gap-y-5">
               <div class="bg-white p-6">
                 <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
                 <p class="text-info">
@@ -261,7 +262,7 @@
                 </p>
               </div>
             </main>
-            <!--// MAIN //-->
+            <!--// OUTPUT SECTION //-->
           </div>
         </div>
 
@@ -349,6 +350,7 @@
     <script type="module" src="/main.js"></script>
     <script type="module" src="./src/js/calculator.js"></script>
     <!-- <script type="module" src="./src/js/calculator2.js"></script> -->
+    <script type="module" src="./src/js/projectileMotion.js"></script>
     <script type="module" src="./src/js/menu.js"></script>
 
     <!-- SCRIPTS -->
