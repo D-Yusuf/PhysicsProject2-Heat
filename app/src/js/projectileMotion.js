@@ -27,9 +27,9 @@ function getEquationBox() {
             }
         }
     }
-    return equationBox;
-    // console.log(equationBox)
+    // return equationBox;
+    console.log(equationBox)
 }
 function render(){
-
+    getEquationBox()
 }
