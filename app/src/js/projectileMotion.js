@@ -1,8 +1,10 @@
 import { projectileEquations } from "./data";
-const initialVelocity = $("#initial-velocity");
-const theta = $("#throw-angle");
 const calculateBtn = $("#calculate-btn");
-const outputSection = $('output-section')
+const outputSection = $('#output-section')
+
+export const initialVelocity = $("#initial-velocity");
+export const theta = $("#throw-angle");
+export const gravity = 10;
 
 calculateBtn.on("click", render);
 
@@ -22,14 +24,32 @@ function getEquationBox() {
     const outputs = getCheckedBoxes()
     for(let i = 0; i < outputs.length; i++){
         for(let equation of projectileEquations){
-            if (equation.name.includes(outputs[i].name)){
+            if (equation.name == outputs[i].name){
                 equationBox.push(equation)
             }
         }
     }
-    // return equationBox;
-    console.log(equationBox)
+    return equationBox;
+    
 }
 function render(){
-    getEquationBox()
+    const renderedEquations = getEquationBox();
+    let renderedBoxes = '';
+    for(let equation of renderedEquations){
+        renderedBoxes += `
+        <div class="bg-white p-6">
+            <h2 class="text-xl text-title font-bold">${equation.title}</h2>
+            <p class="text-info">
+                ${equation.symbol} = ${equation.equationSolution()} ${equation.unit}
+            </p>
+        </div>
+        `;
+        
+    }
+    outputSection.html(renderedBoxes)
+    
+    // console.log(renderedBoxes)
 }
+
+
+

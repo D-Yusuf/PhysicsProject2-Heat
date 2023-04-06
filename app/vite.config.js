@@ -6,10 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        credits: 'src/credits.html',
-        code: 'src/code.html',
         calculator: 'src/js/calculator.js',
-        // entry: 'main.js',
+        entry: 'main.js',
+        projectileMotion: 'src/js/projectileMotion.js'
+        // code: 'src/code.html',
+        // credits: 'src/credits.html',
         // Add additional entries for each HTML file you want to include
       }
     }
