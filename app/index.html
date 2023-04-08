@@ -153,21 +153,62 @@
 
                   <!-- MAIN -->
                   <main class="bg-main max-w-full px-5 py-7 grid gap-y-5">
+                    <!-- Celcius -->
                     <div class="bg-white p-6">
-                      <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
+                      <!-- icon -->
+                      <span class="text-info flex absolute">
+                        <div
+                          class="tooltip"
+                          data-tip="° F = ( °C × 9 5 ) + 32, K = °C + 273.15"
+                        >
+                          <i
+                            class="fa-sharp sm:text-2xl text-xl fa-solid fa-circle-info"
+                          ></i>
+                        </div>
+                      </span>
+                      <!-- title -->
+                      <header class="w-full text-xl text-title font-bold">
+                        <h1>سلسيوس(°C)</h1>
+                      </header>
                       <p id="first-box" class="text-info">
                         𝑥 سلسيوس = 𝑥 فهرنهايت <br />
                         𝑥 سلسيوس = 𝑥 كلفن
                       </p>
                     </div>
+
+                    <!-- Fehrenhite -->
                     <div class="bg-white p-6">
-                      <h2 class="text-xl text-title font-bold">فهرنهايت(°F)</h2>
-                      <p id="second-box" class="text-info">
+                      <!-- icon -->
+                      <span class="text-info flex absolute">
+                        <div
+                        class="tooltip"
+                        data-tip="°C = (°F - 32) × 5/9, K = (F − 32) × 5/9 + 273"
+                        >
+                        <i
+                        class="fa-sharp sm:text-2xl text-xl fa-solid fa-circle-info"
+                        ></i>
+                      </div>
+                    </span>
+                    <h2 class="text-xl text-title font-bold">فهرنهايت(°F)</h2>
+                    <p id="second-box" class="text-info">
                         𝑥 فهرنهايت = 𝑥 سلسيوس <br />
                         𝑥 فهرنهايت = 𝑥 كلفن
                       </p>
                     </div>
+
+                    <!-- Kelvin -->
                     <div class="bg-white p-6">
+                      <!-- icon -->
+                      <span class="text-info flex absolute">
+                        <div
+                        class="tooltip"
+                        data-tip="°C = K – 273, °F = (K − 273.15) × 9/5 + 32"
+                        >
+                        <i
+                        class="fa-sharp sm:text-2xl text-xl fa-solid fa-circle-info"
+                        ></i>
+                      </div>
+                    </span>
                       <h2 class="text-xl text-title font-bold">كلفن(K)</h2>
                       <p id="third-box" class="text-info">
                         𝑥 كلفن = 𝑥 سلسيوس <br />
@@ -237,6 +278,7 @@
                         <label for="max-height">اقصى ارتفاع</label>
                         <input
                           class="output-checkbox"
+                          checked="true"
                           type="checkbox"
                           name="max-height"
                           id="max-height"
@@ -293,11 +335,8 @@
                     class="bg-main max-w-full px-5 py-7 grid gap-y-5"
                   >
                     <div class="bg-white p-6">
-                      <h2 class="text-xl text-title font-bold">سلسيوس(°C),</h2>
-                      <p class="text-info">
-                        𝑥 سلسيوس = 𝑥 فهرنهايت <br />
-                        𝑥 سلسيوس = 𝑥 كلفن
-                      </p>
+                      <h2 class="text-xl text-title font-bold">اقصى ارتفاع</h2>
+                      <p class="text-info">hmax = 0.00 m</p>
                     </div>
                   </main>
                   <!--// OUTPUT SECTION //-->
@@ -308,17 +347,16 @@
             <!--/ Slides /-->
           </div>
           <!-- If we need pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
 
           <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div> -->
 
           <!-- If we need scrollbar -->
           <div class="swiper-scrollbar"></div>
         </div>
         <!--// Slider main container //-->
-
       </div>
       <!--// APPS //-->
 
@@ -342,7 +380,7 @@
 
       <!-- CONTACT US -->
     </div>
-      <!--// CONTAINER //-->
+    <!--// CONTAINER //-->
     <div
       id="contact"
       class="grow flex flex-col bg-info relative bottom-0 right-0 md:py-5 py-2"
@@ -380,7 +418,10 @@
       </ul>
       <!--// SOCIAL MEDIA ACCOUNTS //-->
       <!-- Extras -->
-      <div dir="rtl" class="flex absolute sm:text-base text-xs md:text-lg  top-1 right-1">
+      <div
+        dir="rtl"
+        class="flex absolute sm:text-base text-xs md:text-lg top-1 right-1"
+      >
         صنع طلاب الريادة&nbsp;
         <a
           class="underline text-blue-500 ring ring-blue-600 rounded-md"

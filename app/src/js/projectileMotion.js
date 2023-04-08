@@ -7,31 +7,6 @@ export const theta = $("#throw-angle");
 export const gravity = 10;
 
 calculateBtn.on("click", render);
-
-function getCheckedBoxes() {
-
-  let checkedBoxes = [];
-  for (let box of $('.output-checkbox:checked')) {
-    // console.log(box)
-    checkedBoxes.push(box);
-  }
-  return checkedBoxes;
-}
-
-
-function getEquationBox() {
-    let equationBox = [];
-    const outputs = getCheckedBoxes()
-    for(let i = 0; i < outputs.length; i++){
-        for(let equation of projectileEquations){
-            if (equation.name == outputs[i].name){
-                equationBox.push(equation)
-            }
-        }
-    }
-    return equationBox;
-    
-}
 function render(){
     const renderedEquations = getEquationBox();
     let renderedBoxes = '';
@@ -47,9 +22,36 @@ function render(){
         
     }
     outputSection.html(renderedBoxes)
-    
-    // console.log(renderedBoxes)
+    console.log(outputSection.html())
 }
+function getEquationBox() {
+    let equationBox = [];
+    const outputs = getCheckedBoxes()
+    for(let i = 0; i < outputs.length; i++){
+        for(let equation of projectileEquations){
+            if (equation.name == outputs[i].name){
+                equationBox.push(equation)
+            }
+        }
+    }
+    return equationBox;
+    
+}
+
+function getCheckedBoxes() {
+
+  let checkedBoxes = [];
+  for (let box of $('.output-checkbox:checked')) {
+    // console.log(box)
+    checkedBoxes.push(box);
+  }
+  return checkedBoxes;
+}
+
+
+
+
+
 
 
 
