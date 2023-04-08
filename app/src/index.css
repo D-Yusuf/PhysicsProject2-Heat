@@ -41,8 +41,8 @@
       before:left-1/2 
       before:-top-3 
       before:w-max 
-      before:max-w-xs 
-      before:-translate-x-1/2 
+      before:max-w-sm 
+      before:-translate-x-[-1%]
       before:-translate-y-full 
       before:rounded-lg 
       before:bg-gray-700 
@@ -59,6 +59,7 @@
       after:h-0 
       after:w-0 
       after:-translate-x-1/2 
+      after:rotate-45
       after:border-8 
       after:border-t-gray-700 
       after:border-l-transparent 
